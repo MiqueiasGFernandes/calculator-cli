@@ -1,0 +1,38 @@
+{
+  "name": "calculator-cli",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npm run build && node ./build/index.js",
+    "build": "tsc ./src/index.ts --outDir ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiqueiasGFernandes/calculator-cli.git"
+  },
+  "keywords": [],
+  "author": "Miquéias G. Fernandes <miqueiasfernandes.dev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiqueiasGFernandes/calculator-cli/issues"
+  },
+  "homepage": "https://github.com/MiqueiasGFernandes/calculator-cli#readme",
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "tsyringe": "^4.6.0"
+  }
+}
