@@ -1,17 +1,12 @@
-import { Command } from 'commander';
+import 'reflect-metadata';
+
+import { container } from 'tsyringe';
 
 import DiConfig from './config/Di.config';
+import CalculateController from './controllers/Calculate.controller';
 
 DiConfig.init();
 
-const program = new Command();
+const controller = container.resolve<CalculateController>('CalculateController');
 
-program
-  .requiredOption('-v', '--value', 'Set a base value')
-  .option('-s', '--subtract', 'Subtract value from base number')
-  .option('-a', '--add', 'Add value to base number')
-  .option('-d', '--divide', 'Divide base number by value');
-
-program.parse(process.argv);
-
-program.opts();
+controller.calc();
